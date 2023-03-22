@@ -19,14 +19,10 @@ if %lang% EQU %pee% GOTO P1
 
 
 :P1
-call npm i @peasy-lib/peasy-ui
-call npm i @peasy-lib/peasy-input
-call npm i @peasy-lib/peasy-assets
+call npm i @peasy-lib/peasy-ui @peasy-lib/peasy-input @peasy-lib/peasy-assets
 
 :N1
-call npm i vite --save-dev
-call npm i typescript --save-dev
-call npm i json --save-dev
+call npm i vite typescript json --save-dev
 
 echo creating file structure
 md src
