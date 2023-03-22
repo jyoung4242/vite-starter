@@ -105,6 +105,61 @@ echo ^</html^> >>index.html
 cd src
 echo creating /src/style.css
 echo /*style.css*/ >style.css
+echo body {>>style.css
+echo  box-sizing: border-box;>>style.css
+echo  padding: 0;>>style.css
+echo  margin: 0;>>style.css
+echo  line-height: 1;>>style.css
+echo  background-color: var(--current-background);>>style.css
+echo  color: var(--current-foreground);>>style.css
+echo }>>style.css
+
+echo .color1 {>>style.css
+echo  color: #131617;>>style.css
+echo }>>style.css
+echo .color2 {>>style.css
+echo color: #34393c;>>style.css
+echo }>>style.css
+echo .color3 {>>style.css
+echo  color: #5e676b;>>style.css
+echo }>>style.css
+echo .color4 {>>style.css
+echo  color: #929fa4;>>style.css
+echo }>>style.css
+echo .color5 {>>style.css
+echo  color: #d0e3e9;>>style.css
+echo }>>style.css
+
+echo  :root {  >>style.css
+echo  ^/* Dark theme *^/  >>style.css
+echo   --dark-background: #34393c;  >>style.css
+echo   --dark-dark-accent: #131617; >>style.css
+echo   --dark-neutral: #5e676b; >>style.css
+echo   --dark-light-accent: #929fa4;  >>style.css
+echo   --dark-foregeound: #d0e3e9;  >>style.css
+echo   ^/* Light theme *^/  >>style.css >>style.css
+echo   --light-background: #d0e3e9; >>style.css
+echo   --light-dark-accent: #131617; >>style.css
+echo   --light-foregeound: #34393c; >>style.css
+echo   --light-neutral: #5e676b; >>style.css
+echo   --light-light-accent: #929fa4; >>style.css
+echo   ^/* Defaults *^/ >>style.css
+echo   --current-background: var(--light-background); >>style.css
+echo   --current-dark-accent: var(--light-dark-accent); >>style.css
+echo   --current-light-accent: var(--light-light-accent); >>style.css
+echo   --current-foreground: var(--light-foregeound);  >>style.css
+echo   --current-neutral: var(--light-neutral); >>style.css
+echo   } >>style.css
+
+echo   @media (prefers-color-scheme: dark) { >>style.css
+echo   :root {>>style.css
+echo   --current-background: var(--dark-background);>>style.css
+echo   --current-foreground: var(--dark-foregeound);>>style.css
+echo   --current-dark-accent: var(--dark-dark-accent);>>style.css
+echo   --current-light-accent: var(--dark-light-accent);>>style.css
+echo   --current-neutral: var(--dark-neutral);>>style.css
+echo   }>>style.css
+echo   }>>style.css
 
 cd ..
 call npx json -I -f package.json -e "this.scripts.build='tsc && vite build'"
