@@ -66,7 +66,6 @@ echo    "outDir": "./build/",>>tsconfig.json
 echo    "sourceMap": true, >>tsconfig.json
 echo    "noImplicitAny": true,>>tsconfig.json
 echo    "module": "ESNext",>>tsconfig.json
-echo    "target": "ESNext",>>tsconfig.json
 echo    "jsx": "react",>>tsconfig.json
 echo    "allowJs": true,>>tsconfig.json
 echo    "moduleResolution": "Node",>>tsconfig.json
