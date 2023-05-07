@@ -78,6 +78,12 @@ echo    }>>tsconfig.json
 echo  }>>tsconfig.json
 
 
+echo creating vite.config.js file in root
+echo export default {>vite.config.js
+echo   base: "./",>>vite.config.js
+echo };>>vite.config.js
+
+
 echo creating .gitignore file
 
 echo node_modules>.gitignore
