@@ -83,14 +83,11 @@ echo export default {>vite.config.js
 echo   base: "./",>>vite.config.js
 echo };>>vite.config.js
 
-
 echo creating .gitignore file
-
 echo node_modules>.gitignore
 echo build>>.gitignore
 
 echo creating /index.html
-
 echo ^<!DOCTYPE html^> >index.html
 echo ^<html lang="en"^> >>index.html
 echo ^<head^> >>index.html
