@@ -160,7 +160,7 @@ echo   }>>style.css
 echo   }>>style.css
 
 cd ..
-call npx json -I -f package.json -e "this.scripts.build='tsc && vite build'"
+call npx json -I -f package.json -e "this.scripts.build='vite build'"
 call npx json -I -f package.json -e "this.scripts.dev='vite'"
 call npx json -I -f package.json -e "this.scripts.preview='vite preview'"
 
