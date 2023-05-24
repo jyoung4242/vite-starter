@@ -47,7 +47,7 @@ echo import {Input} from '@peasy-lib/peasy-input';>>main.ts
 
 echo const model={};>>main.ts
 echo const template=`^<div^> Hello Peasy!!! ^</div^>`;>>main.ts
-echo UI.create(document.body, template, model);>>main.ts
+echo UI.create(document.body, template, model );>>main.ts
 
 
 :N2
